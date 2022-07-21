@@ -6,6 +6,7 @@ const trans = document.querySelector(".transfer");
 const popup = document.querySelector(".popup");
 
 
+
 if (localStorage.length === 0){
     let accountNumber = [];
     let balance = [];
@@ -83,9 +84,10 @@ trans.addEventListener("click", x=>{
     let senderAccount = popup.lastElementChild.lastElementChild.innerText // string
     
     // console.log(localStorage.getItem(senderAccount), localStorage.getItem(transferAccount)); Details befor sending
+
   
     
-    if(localStorage.getItem(senderAccount) == 0){
+    if((localStorage.getItem(senderAccount) == 0) || (parseInt(amount) > parseInt(localStorage.getItem(senderAccount)))){
             alert(`Sorry! Insufficient Bank balance`);
             
                 popup.lastElementChild.remove();
