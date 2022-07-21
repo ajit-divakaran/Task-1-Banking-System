@@ -119,9 +119,9 @@ trans.addEventListener("click", x=>{
 
     else{
         alert(`Error:${transferAccount} is an invalid input`);
-        // if((last.textContent === secondLast.textContent)||(last.previousElementSibling.textContent === secondLast.previousElementSibling.textContent)){
+       
             popup.lastElementChild.remove();
-        // }
+        
     }
 
 });
